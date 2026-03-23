@@ -54,6 +54,28 @@
   .cta-ribbon.alt {
     background: var(--blue);
   }
+  @media (min-width: 641px) {
+    .cta-ribbon-row {
+      display: flex;
+      justify-content: center;
+      gap: 16px;
+      padding: 28px 24px;
+      background: var(--off-white);
+    }
+    .cta-ribbon {
+      display: inline-block;
+      border-radius: 4px;
+      padding: 18px 36px;
+      margin-bottom: 0;
+      font-size: 17px;
+    }
+  }
+  @media (max-width: 640px) {
+    .cta-ribbon-row {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 
   /* ── Form section ─────────────────────────────────── */
   .form-section {
@@ -106,6 +128,13 @@
   #can_embed_form #d_sharing,
   #can_embed_form .action_sidebar
   { display: none !important; }
+  #can_embed_form ul,
+  #can_embed_form ol,
+  #can_embed_form li {
+    list-style: none !important;
+    padding-left: 0 !important;
+    margin-left: 0 !important;
+  }
   #can_main_col {
     width: 100% !important;
     float: none !important;
@@ -236,7 +265,7 @@ function googleTranslateElementInit() {
     <span></span><span></span><span></span>
   </button>
   <ul class="nav-links">
-    <li><a href="https://secure.actblue.com/donate/stop-ice-1" class="nav-cta" target="_blank" rel="noopener">Donate</a></li>
+    <li><a href="https://secure.actblue.com/donate/stop-ice-1" class="nav-cta" target="_blank" rel="noopener">Support</a></li>
     <li id="google_translate_element" style="display:flex;align-items:center;"></li>
   </ul>
 </nav>
@@ -260,9 +289,11 @@ function googleTranslateElementInit() {
   </div>
 </section>
 
-<!-- CTA RIBBONS -->
-<a href="#pledge" class="cta-ribbon">Pledge to Vote to STOP ICE</a>
-<a href="pdfs/stop_ice_bumper_sticker.pdf" class="cta-ribbon alt" download>Get a Free Bumper Sticker</a>
+<!-- CTA BUTTONS -->
+<div class="cta-ribbon-row">
+  <a href="#pledge" class="cta-ribbon">Pledge to Vote to STOP ICE</a>
+  <a href="pdfs/stop_ice_bumper_sticker.pdf" class="cta-ribbon alt" download>Get a Free Bumper Sticker</a>
+</div>
 
 <!-- ═══════════════════════════════════════════════════════
      FORM
@@ -305,7 +336,7 @@ function googleTranslateElementInit() {
       </div>
     </a>
     <ul class="footer-nav">
-      <li><a href="https://secure.actblue.com/donate/stop-ice-1" target="_blank" rel="noopener">Donate</a></li>
+      <li><a href="https://secure.actblue.com/donate/stop-ice-1" target="_blank" rel="noopener">Support</a></li>
       <li><a href="privacy.html">Privacy Policy</a></li>
     </ul>
   </div>
